@@ -7,7 +7,7 @@ namespace Fina.Core.Responses
 		[JsonConstructor]
 		public PagedResponse(TData? data, int totalCount, int currentPage = 1, int pageSize = Configuration.DefaultPageSize) : base(data) 
 		{
-			// Data = data;
+			Data = data;
 			TotalCount = totalCount;
 			CurrentPage = currentPage;
 			PageSize = pageSize;

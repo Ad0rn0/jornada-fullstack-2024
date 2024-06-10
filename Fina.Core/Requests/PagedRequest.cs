@@ -5,5 +5,6 @@ namespace Fina.Core.Requests
 		public int PageSize { get; set; } = Configuration.DefaultPageSize;
 		public int PageNumber { get; set; } = Configuration.DefaultPageNumber;
 		
+		public int PageCount { get; set; } = (Configuration.DefaultPageNumber - 1) * Configuration.DefaultPageSize;
 	}
 }
