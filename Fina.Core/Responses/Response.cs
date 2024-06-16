@@ -5,6 +5,7 @@ namespace Fina.Core.Responses
 	public class Response<TData>
 	{
 		private int _code = Configuration.DefaultStatusCode;
+		
 
 		[JsonConstructor]
 		public Response() => _code = Configuration.DefaultStatusCode;
@@ -14,6 +15,7 @@ namespace Fina.Core.Responses
 			Data = data;
 			_code = code;
 			Message = message;
+			Console.WriteLine("Código do erro:" + _code);
 		}
 
 		public TData? Data { get; set; }
